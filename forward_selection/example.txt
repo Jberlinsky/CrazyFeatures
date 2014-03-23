@@ -48,3 +48,8 @@ Selected features:1
 
 Enter a candidate features bitmask (-1 to quit): -1
 Quit
+
+Tips:
+There are 5 attributes in the data/contact-lenses.arff in total. The last one is
+the classified result (namely label), and so there are 4 features in total. The 
+range of the candidate features mask is from 0000 to 1111.
