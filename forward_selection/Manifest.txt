@@ -1,0 +1,3 @@
+Main-Class: edu.umich.crazy_features.ForwardSelectionARFF
+Class-Path: weka.jar
+

@@ -83,7 +83,7 @@ public class ForwardSelectionARFF {
                         
                         System.out.print("Selected features:");
                         for (Integer i : selected_features) {
-                            System.out.print(i + " ");
+                            System.out.print(i + 1 + " ");
                         }
                         System.out.println("\n  pctCorrect: " + Double.toString(pctCorrect));
                     }
