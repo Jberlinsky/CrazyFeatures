@@ -14,5 +14,7 @@ Example:
 # What's the data?    
 
 breast-cancer.arff: test data provided by weka.
+
 contact-lenses.arff: test data provided by weka.
+
 important-webpages.arff: test data created by Yucheng Cai.
