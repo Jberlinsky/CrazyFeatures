@@ -1,5 +1,6 @@
 class Repository < ActiveRecord::Base
   belongs_to :user
+  has_many :test_runs
 
   before_create :assign_ssh_key, :create_deploy_key!, :create_deploy_hook!
 
@@ -29,6 +30,10 @@ class Repository < ActiveRecord::Base
   rescue
     # The hook already exists
     true
+  end
+
+  def to_s
+    name
   end
 
   private

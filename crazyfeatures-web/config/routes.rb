@@ -1,5 +1,16 @@
 CrazyfeaturesWeb::Application.routes.draw do
-  get "home/index"
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks", :registrations => "registrations" }
-  root to: 'home#index'
+
+  resources :repositories, only: [:index, :show, :edit] do
+    resources :test_runs, only: [:show]
+  end
+  get "home/unauthenticated"
+  get "home/index"
+  authenticated :user do
+    root to: 'repositories#index'
+  end
+
+  unauthenticated do
+    root to: "home#unauthenticated", as: :unauthenticated
+  end
 end

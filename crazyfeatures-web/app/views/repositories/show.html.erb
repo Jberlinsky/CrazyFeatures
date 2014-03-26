@@ -1,0 +1,7 @@
+<h1><%= @repository.name %></h1>
+
+<ul>
+  <% @test_runs.each do |test_run| %>
+    <li><%= link_to test_run, repository_test_run_path(@repository, test_run) %></li>
+  <% end %>
+</ul>
